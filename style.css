@@ -1,0 +1,166 @@
+/* Genel Sayfa Ayarları */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: all 0.4s ease;
+}
+
+/* Karanlık Tema */
+body.karanlik-tema {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #1a73e8;
+    border-bottom: 3px solid #f1c40f;
+    display: inline-block;
+}
+
+/* Konteynır Düzeni */
+.konteynir {
+    display: flex;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    align-items: center;
+}
+
+body.karanlik-tema .konteynir, 
+body.karanlik-tema .form-bolumu {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #333;
+}
+
+.profil-resmi {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #1a73e8;
+}
+
+.metin-alani {
+    margin-left: 25px;
+    flex: 1;
+}
+
+/* Hesap Makinesi Tasarımı */
+.calculator {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #2c3e50;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+#ekran {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    background: #ecf0f1;
+    color: #2c3e50;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.butonlar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.butonlar button {
+    height: 50px;
+    background: #34495e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.butonlar button:hover {
+    background: #48627a;
+}
+
+.temizle-btn { background: #e74c3c !important; }
+.esittir-btn { background: #27ae60 !important; grid-row: span 2; height: 110px !important; }
+
+/* Form ve Genel Butonlar */
+.form-bolumu {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.gece-modu-btn {
+    background-color: #34495e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+#gonder-btn {
+    background-color: #1a73e8;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+}
+/* Mobil Cihazlar İçin Ayarlar (Ekran 600px'den küçükse) */
+@media (max-width: 600px) {
+    .konteynir {
+        flex-direction: column; /* Yan yana olanları alt alta dizer */
+        text-align: center;
+    }
+
+    .metin-alani {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .profil-resmi {
+        width: 120px; /* Mobilde resmi biraz küçültüyoruz */
+        height: 120px;
+    }
+
+    .calculator {
+        width: 90%; /* Hesap makinesi ekrana tam sığsın */
+    }
+}
